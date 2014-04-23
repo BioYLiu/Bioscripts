@@ -1,0 +1,1 @@
+This is a perl script use to count the G+C percentage of fa file
