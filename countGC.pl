@@ -26,7 +26,7 @@ foreach my $inputfile(@ARGV){
 		}
 	#compute the GC count
 	my $GC=(($CountG+$CountC)*100)/($CountA+$CountC+$CountG+$CountT);
-	#格式化输出
+	#sprint
 	printf OUTFILE  "The $inputfile file's GC%%\=%.4f%%,Attention!!!!I can't recognize bases total are $error\n",$GC;
 	}
 close OUTFILE;
