@@ -1,7 +1,9 @@
-#!usr/bin/perl -w 
+#!usr/bin/perl 
 #write by lyuan513@gmail.com 2011-5-20
 #Useage : perl countGC.pl inputfile outputfile
 use strict;
+use warnings;
+
 foreach my $inputfile(@ARGV){
 	open INPUTFILE,"< $inputfile" or die "can't open file!please check you file name!";
 	open OUTFILE,">> thePercentageOfGC.txt";
@@ -16,7 +18,7 @@ foreach my $inputfile(@ARGV){
 	my $CountC=0;
 	my $CountT=0;
 	my $error=0;
-	#计算A,C,G,T的数量
+	#compute percentage
 	foreach (@DNA){
 		if (/A/){$CountA++}
 		elsif(/G/){$CountG++}
@@ -26,7 +28,7 @@ foreach my $inputfile(@ARGV){
 		}
 	#compute the GC count
 	my $GC=(($CountG+$CountC)*100)/($CountA+$CountC+$CountG+$CountT);
-	#sprint
+	#sprinf
 	printf OUTFILE  "The $inputfile file's GC%%\=%.4f%%,Attention!!!!I can't recognize bases total are $error\n",$GC;
 	}
 close OUTFILE;
