@@ -1,5 +1,5 @@
-This is the perl script to count the GC percentage
 #by Yuan L 02/02/2016 
+This is the perl script to count the GC percentage
 Useage: perl countGC.pl inputfile outputfile
 Good luck!
 
