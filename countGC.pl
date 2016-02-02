@@ -31,6 +31,7 @@ foreach my $inputfile(@ARGV){
 	#sprinf
 	printf OUTFILE  "The $inputfile file's GC%%\=%.4f%%,Attention!!!!I can't recognize bases total are $error\n",$GC;
 	}
+
 close OUTFILE;
 close INPUTFILE;
 exit;
