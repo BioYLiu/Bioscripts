@@ -26,6 +26,7 @@ foreach my $inputfile(@ARGV){
 		elsif(/T/){$CountT++}
 		else{$error++}
 		}
+
 	#compute the GC count
 	my $GC=(($CountG+$CountC)*100)/($CountA+$CountC+$CountG+$CountT);
 	#sprinf
